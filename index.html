@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,46 +11,21 @@
 <body>
 
 <header>
-    <h1>AI Shorts Maroc 🔥</h1>
+<h1>AI Shorts Maroc 🔥</h1>
 </header>
 
-<div class="feed">
+<div id="feed" class="feed"></div>
 
-    <div class="video-card">
-        <img src="https://picsum.photos/400/700?1">
-        <h3>Monkey Police Story</h3>
-        <button>▶ Play</button>
-    </div>
-
-    <div class="video-card">
-        <img src="https://picsum.photos/400/700?2">
-        <h3>Scary AI Night</h3>
-        <button>▶ Play</button>
-    </div>
-
-    <div class="video-card">
-        <img src="https://picsum.photos/400/700?3">
-        <h3>Funny Street AI</h3>
-        <button onclick="playVideo('video1.mp4')">▶ Play</button>
-    </div>
-
-</div>
-  <div id="videoModal" class="modal">
+<!-- VIDEO POPUP -->
+<div id="videoModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeVideo()">✖</span>
 
-    <video id="videoPlayer" controls>
-      <source src="" type="video/mp4">
-      Your browser does not support video.
-    </video>
-
-  </div>
-</div>  
-    
-
-</body>
-</html
+    <video id="videoPlayer" controls></video>
 
   </div>
 </div>
-  
+
+<script src="script.js"></script>
+</body>
+</html>
