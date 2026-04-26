@@ -1,20 +1,47 @@
 
+let videos = [
+  {
+    title: "Monkey Police Story",
+    url: "video1.mp4"
+  },
+  {
+    title: "Funny AI Street",
+    url: "video2.mp4"
+  }
+];
 
-let feed = document.getElementById("feed");
+let index = 0;
+
+let player = document.getElementById("videoPlayer");
+
+function loadVideo(){
+    player.src = videos[index].url;
+}
+
+function nextVideo(){
+    index++;
+    if(index >= videos.length) index = 0;
+    loadVideo();
+}
+
+function prevVideo(){
+    index--;
+    if(index < 0) index = videos.length - 1;
+    loadVideo();
+}
 
 function addVideo(){
+    let title = document.getElementById("title").value;
+    let url = document.getElementById("url").value;
 
-let title = document.getElementById("title").value;
-let url = document.getElementById("url").value;
+    videos.push({title, url});
 
-feed.innerHTML += `
-<div class="video">
-<h3>${title}</h3>
-<video controls src="${url}"></video>
-</div>
-`;
+    document.getElementById("title").value = "";
+    document.getElementById("url").value = "";
 
-document.getElementById("title").value = "";
-document.getElementById("url").value = "";
-
+    alert("Video added 🔥");
 }
+
+// load first video
+loadVideo();
+
