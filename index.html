@@ -3,25 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Shorts</title>
+<title>AI Shorts Morocco</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>AI Shorts 🔥</h1>
-</header>
+<header>🔥 AI Shorts Morocco</header>
 
-<!-- ADD VIDEO -->
-<div class="add-box">
-<input type="text" id="title" placeholder="Video title">
-<input type="text" id="url" placeholder="Video link (mp4 or youtube embed)">
-<button onclick="addVideo()">Add Video</button>
+<!-- VIDEO PLAYER -->
+<div class="player">
+    <video id="videoPlayer" autoplay controls></video>
 </div>
 
-<!-- FEED -->
-<div id="feed"></div>
+<!-- CONTROLS -->
+<div class="controls">
+    <button onclick="prevVideo()">⬅</button>
+    <button onclick="nextVideo()">➡</button>
+</div>
+
+<!-- ADD VIDEO -->
+<div class="add">
+    <input id="title" placeholder="Video title">
+    <input id="url" placeholder="Video mp4 link">
+    <button onclick="addVideo()">Add</button>
+</div>
 
 <script src="script.js"></script>
 </body>
