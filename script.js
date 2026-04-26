@@ -48,4 +48,9 @@ function closeVideo(){
 
     video.pause();
     modal.style.display = "none";
+}{
+  title: "AI Story 1",
+  src: "video1.mp4",
+  img: "thumb1.jpg"
 }
+
