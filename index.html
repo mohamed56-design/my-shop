@@ -1,31 +1,28 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Shorts Maroc</title>
+<title>AI Shorts</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>AI Shorts Maroc 🔥</h1>
+<h1>AI Shorts 🔥</h1>
 </header>
 
-<div id="feed" class="feed"></div>
-
-<!-- VIDEO POPUP -->
-<div id="videoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeVideo()">✖</span>
-
-    <video id="videoPlayer" controls></video>
-
-  </div>
+<!-- ADD VIDEO -->
+<div class="add-box">
+<input type="text" id="title" placeholder="Video title">
+<input type="text" id="url" placeholder="Video link (mp4 or youtube embed)">
+<button onclick="addVideo()">Add Video</button>
 </div>
 
-<iframe src="https://www.youtube.com/embed/ID"></iframe>
+<!-- FEED -->
+<div id="feed"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
