@@ -39,7 +39,8 @@ function addVideo(){
     document.getElementById("title").value = "";
     document.getElementById("url").value = "";
 
-    alert("Video added 🔥");
+    alert("Video added 🔥");url: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+  
 }
 
 // load first video
