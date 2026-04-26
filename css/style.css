@@ -5,7 +5,8 @@ box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
 
-body{
+body {
+border: 5px solid red; 
 background:#0f0f0f;
 color:white;
 }
