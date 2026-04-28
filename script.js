@@ -1,21 +1,42 @@
+// Loader
+window.addEventListener("load", ()=>{
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},2000);
+});
 
+// Text animation
+let words = ["AI Creator","Video Maker","MX Vision"];
+let i = 0;
 
-let videos = [
-  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-];
+setInterval(()=>{
+document.getElementById("text").innerHTML = words[i];
+i = (i + 1) % words.length;
+},2000);
 
-let index = 0;
-
-let player = document.getElementById("videoPlayer");
-
-function load(){
-  player.src = videos[index];
+// Counters
+function counter(id, max, text){
+let c = 0;
+let x = setInterval(()=>{
+c++;
+document.getElementById(id).innerHTML = c + text;
+if(c >= max) clearInterval(x);
+},30);
 }
 
-function nextVideo(){
-  index++;
-  if(index >= videos.length) index = 0;
-  load();
+counter("counter1",120,"+ Projects");
+counter("counter2",50,"K Views");
+
+// Scroll button
+window.onscroll = function(){
+if(document.documentElement.scrollTop > 300){
+document.getElementById("topBtn").style.display="block";
+}else{
+document.getElementById("topBtn").style.display="none";
+}
+};
+
+function topFunction(){
+window.scrollTo({top:0,behavior:"smooth"});
 }
 
-load();
