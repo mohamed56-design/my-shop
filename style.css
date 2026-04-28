@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
+}
+
+header {
+  background: #1c1c1c;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 15px;
+}
+
+.video-card {
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+}
