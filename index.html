@@ -1,23 +1,248 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Shorts</title>
-<link rel="stylesheet" href="css/style.css">
+<title>MX Vision</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+height:100vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+header video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+z-index:-1;
+}
+
+.hero h1{
+font-size:65px;
+color:#00eaff;
+text-shadow:0 0 25px #00eaff;
+animation:fadeUp 2s ease;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+color:#ddd;
+animation:fadeUp 2.5s ease;
+}
+
+.btns{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+background:#00eaff;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00eaff;
+}
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+h2{
+font-size:42px;
+margin-bottom:40px;
+color:#00eaff;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:20px;
+transition:0.4s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00eaff44;
+}
+
+.price{
+font-size:30px;
+margin:15px 0;
+color:#00eaff;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#050505;
+color:#999;
+}
+
+.social a{
+color:#00eaff;
+margin:10px;
+font-size:22px;
+text-decoration:none;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.counter{
+font-size:50px;
+color:#00eaff;
+margin-top:20px;
+}
+</style>
 </head>
 
 <body>
 
-<header>AI Shorts 🔥</header>
+<header>
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-flower-opening-1560674211207?download=1080p" type="video/mp4">
+</video>
 
-<video id="videoPlayer" controls autoplay style="width:100%"></video>
+<div class="overlay"></div>
 
-<div>
-<button onclick="nextVideo()">Next ▶</button>
+<div class="hero">
+<h1>MX Vision</h1>
+<p>Création de contenu professionnel par Intelligence Artificielle</p>
+
+<div class="btns">
+<a href="#services" class="btn">Commencer</a>
+<a href="#portfolio" class="btn">Mes Travaux</a>
+</div>
+</div>
+</header>
+
+<section id="portfolio">
+<h2>Mes Créations</h2>
+
+<div class="cards">
+<div class="card">🎬 Vidéos TikTok Viral</div>
+<div class="card">🔥 Publicités AI</div>
+<div class="card">🐵 Monkey Police Videos</div>
+<div class="card">⚽ Shorts Football</div>
+<div class="card">😢 Histoires Émotionnelles</div>
+<div class="card">🎥 Montage Professionnel</div>
+</div>
+</section>
+
+<section id="services">
+<h2>Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Starter</h3>
+<div class="price">100dh</div>
+<p>Vidéo 15 sec</p>
 </div>
 
-<script src="script.js"></script>
+<div class="card">
+<h3>Pro</h3>
+<div class="price">250dh</div>
+<p>Vidéo 30 sec + Effets</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<div class="price">500dh</div>
+<p>Pub complète + Voix + Montage</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Pourquoi MX Vision ?</h2>
+
+<div class="cards">
+<div class="card">⚡ Livraison Rapide</div>
+<div class="card">🎯 Qualité Premium</div>
+<div class="card">🚀 Idées Modernes</div>
+<div class="card">💬 Support Direct</div>
+</div>
+</section>
+
+<section>
+<h2>Statistiques</h2>
+<div class="counter">+120 Projets Réalisés</div>
+<div class="counter">+50K Vues Générées</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+
+<div class="social">
+<a href="#">WhatsApp</a>
+<a href="#">TikTok</a>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+</div>
+</section>
+
+<footer>
+MX Vision © 2026 - AI Creator Brand
+</footer>
 
 </body>
 </html>
